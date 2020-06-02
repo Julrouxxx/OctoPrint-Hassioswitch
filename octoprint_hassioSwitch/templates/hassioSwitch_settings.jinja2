@@ -1,0 +1,20 @@
+<form  class="form-horizontal">
+	<h1>Hassio Instance configuration</h1>
+	<label class="control-label">{{_('URL')}}</label>
+	<div class="controls">
+		<input type="text" id="url" class="input-block-level" data-bind="value: settings.plugins.hassioSwitch.url">
+	</div>
+		<label class="control-label">{{_('Auth Token')}}</label>
+	<div class="controls">
+		<input type="text" class="input-block-level" data-bind="value: settings.plugins.hassioSwitch.auth_token">
+
+	</div>
+	<label class="control-label">{{_('Entity Name')}}</label>
+	<div class="controls">
+		<input type="text" class="input-block-level" data-bind="value: settings.plugins.hassioSwitch.entity_name">
+	</div>
+	<label class="control-label">{{_('Auto-Connect')}}</label>
+	<div class="controls">
+		<input title="When enabled, Octoprint will try to connect to the printer after powering on the outlet" type="checkbox" data-bind="checked: settings.plugins.hassioSwitch.auto_connect">
+	</div>
+</form>
