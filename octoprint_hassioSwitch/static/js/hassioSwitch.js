@@ -6,8 +6,8 @@
  */
 $(function() {
     function HassioswitchViewModel(parameters) {
-        var self = this;
-		self.settings = parameters[0];
+        const self = this;
+        self.settings = parameters[0];
 
 		self.toggle = function(){
 		$.ajax({
@@ -17,7 +17,7 @@ $(function() {
 			data: JSON.stringify({command: "toggle"}),
 			contentType: "application/json; charset=UTF-8",
 			success: function(d){
-				if(d.result != 200){
+				if(d.result !== 200){
 				new PNotify({title: 'HassioSwitch error',
 							 text: 'Server issued error code: ' + d.result,
 							 type: 'error',

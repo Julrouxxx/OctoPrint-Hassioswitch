@@ -9,9 +9,15 @@ or manually using this URL:
 
     https://github.com/Julrouxxx/OctoPrint-Hassioswitch/archive/master.zip
 
-**TODO:** Describe how to install your plugin, if more needs to be done than just installing it via pip or through
-the plugin manager.
-
 ## Configuration
+### Url
+Specify URL of the hassio instance with the port:
+`https://hassio:8123/`
 
-**TODO:** Describe your plugin's configuration options (if any).
+### Auth Token
+Specify the Hassio Auth Token \
+**You can get the auth token by going to User -> Generate long token -> Paste it into the form**
+
+### Auto Connect
+When you click on the outlet icon in the navigation menu, Octoprint will try to connect to the printer 10 seconds after
+

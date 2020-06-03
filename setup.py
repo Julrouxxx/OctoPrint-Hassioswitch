@@ -1,7 +1,7 @@
 # coding=utf-8
 
 ########################################################################################################################
-### Do not forget to adjust the following variables to your own plugin.
+# Do not forget to adjust the following variables to your own plugin.
 
 # The plugin's identifier, has to be unique
 plugin_identifier = "hassioSwitch"
@@ -35,9 +35,9 @@ plugin_license = "AGPLv3"
 # Any additional requirements besides OctoPrint should be listed here
 plugin_requires = []
 
-### --------------------------------------------------------------------------------------------------------------------
-### More advanced options that you usually shouldn't have to touch follow after this point
-### --------------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------------
+# More advanced options that you usually shouldn't have to touch follow after this point
+# --------------------------------------------------------------------------------------------------------------------
 
 # Additional package data to install for this plugin. The subfolders "templates", "static" and "translations" will
 # already be installed automatically if they exist. Note that if you add something here you'll also need to update
@@ -58,7 +58,8 @@ plugin_ignored_packages = []
 #
 # Example:
 #     plugin_requires = ["someDependency==dev"]
-#     additional_setup_parameters = {"dependency_links": ["https://github.com/someUser/someRepo/archive/master.zip#egg=someDependency-dev"]}
+#     additional_setup_parameters = {"dependency_links":
+#     ["https://github.com/someUser/someRepo/archive/master.zip#egg=someDependency-dev"]}
 additional_setup_parameters = {}
 
 ########################################################################################################################
@@ -68,9 +69,10 @@ from setuptools import setup
 try:
 	import octoprint_setuptools
 except:
-	print("Could not import OctoPrint's setuptools, are you sure you are running that under "
-	      "the same python installation that OctoPrint is installed under?")
+	print("Could not import OctoPrint's setuptools, are you sure you are running that under the same python "
+		  "installation that OctoPrint is installed under?")
 	import sys
+
 	sys.exit(-1)
 
 setup_parameters = octoprint_setuptools.create_plugin_setup_parameters(
@@ -91,6 +93,7 @@ setup_parameters = octoprint_setuptools.create_plugin_setup_parameters(
 
 if len(additional_setup_parameters):
 	from octoprint.util import dict_merge
+
 	setup_parameters = dict_merge(setup_parameters, additional_setup_parameters)
 
 setup(**setup_parameters)
